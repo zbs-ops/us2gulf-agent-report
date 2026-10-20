@@ -1,5 +1,12 @@
 # US2GULF Agent: Making a Small Local LLM Trustworthy Enough to Price Real Cars
 
+> **Problem:** pricing a US auction car for UAE resale takes an hour per car, and the only model allowed was a small local LLM that skips steps and invents numbers.
+>
+> **Approach:** the model never produces a fact or a number; it only drives tools. Code fetches the data, computes the bid, and a reply guard replaces the model's own text.
+>
+> **Proof:** 10 real failure modes found in live runs (including a forged report), each fixed in code and documented below.
+
+
 **A case study in building a tool-grounded AI agent for car import decisions (US auctions to the UAE).**
 
 > This repository is a written report only. It contains no source code, no data, no prices, no partner
